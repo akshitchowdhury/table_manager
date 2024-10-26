@@ -3,12 +3,7 @@ import data from '../data';
 import { Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const UserTable = () => {
-    const [userList, setUserList] = useState(data);
-
-    useEffect(() => {
-        setUserList(data);
-    }, [data]);
+const UserTable = ({ userList, setUserList, data}) => {
 
     return (
         <div className="container mt-4">
